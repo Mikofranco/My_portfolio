@@ -1,0 +1,50 @@
+.home-page{
+    position: relative;
+}
+.home-page header{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+.home-page ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.home-page li{
+    list-style: none;
+    
+}
+.home-page a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    transition: 0.6;
+}
+.logo{
+    position: relative;
+    
+}
+.section-one{
+    height: 100vh;
+    background: url("../asset/pexels-engin-akyurt-1446948.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+.home-page .sticky{
+    padding: 10px 10px;
+    color: #000;
+    background: #fff;
+}
+.home-page .sticky nav li span{
+    color: #000;
+}
