@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react"; // Added React
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mo from "../component/assets/mo.svg";
+import github from "../component/assets/github.svg"
+import linkedin from "../component/assets/linkedin.svg"
+
 import {
   faArrowRight,
   faBook,
@@ -286,6 +289,11 @@ function HomePage() {
           </SectionFourCardConatiner>
         </SectionFour>
         <img src={mo} alt="" />
+        <div className="social-links" id={isSticky ? "sticky" : ""}>
+              <a href="https://github.com/Mikofranco"><img src={github} alt="" style={{display: "block", width: "2rem"}}/></a>
+              <a href="https://www.linkedin.com/in/micheal-ogbechie-937827256/"><img src={linkedin} alt="" style={{display: "block", width: "2rem"}}/></a>
+              <a href="https://github.com/Mikofranc"><img src={github} alt="" style={{display: "block", width: "2rem"}}/></a>
+        </div>
       </main>
     </div>
   );
