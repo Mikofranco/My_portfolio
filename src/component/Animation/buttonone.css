@@ -1,4 +1,4 @@
-@property --border-angle-1 {
+/* @property --border-angle-1 {
     syntax: "<angle>";
     inherits: true;
     initial-value: 0deg;
@@ -62,6 +62,7 @@ body {
     place-content: center;
     margin: 0;
     font-family: "Aspekta";
+    
 }
 
 button {
@@ -72,6 +73,8 @@ button {
     font-size: calc(0.8rem + 4vmin);
     font-family: inherit;
     border: 0;
+    cursor: pointer;
+    margin-top: 2rem;
     padding: var(--border-size);
     display: flex;
     width: max-content;
@@ -114,4 +117,4 @@ button div {
     font-family: "Aspekta";
     font-weight: normal;
     src: url("https://assets.codepen.io/240751/Aspekta-300.woff2") format("woff2");
-}
+} */

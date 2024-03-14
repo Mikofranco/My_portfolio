@@ -2,49 +2,106 @@
     position: relative;
 }
 .home-page header{
+    position: fixed;
     display: flex;
-    position: sticky;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     top: 0;
     left: 0;
     transition: 0.6s;
-    padding: 40px 100px;
+    padding: 2rem 2rem;
     z-index: 100000;
+    background: teal;
 }
-.home-page ul{
+.home-page header ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 3rem;
     gap: 15px;
 }
-.home-page li{
+.home-page header li{
     list-style: none;
-    
-}
-.home-page a{
     color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: bolder;
     letter-spacing: 0.5px;
     transition: 0.6;
+    cursor: pointer;
 }
+
 .logo{
     position: relative;
-    
+    transition: 0.6;   
+    color: #fff; 
 }
 .section-one{
-    height: 100vh;
-    background: url("../asset/pexels-engin-akyurt-1446948.jpg") no-repeat center center fixed;
-    background-size: cover;
+    padding: 10rem 10rem;
+    /* background: url("../component/assets/mo.svg") no-repeat center center fixed; */
 }
 .home-page .sticky{
+    position: sticky;
+    width: 100%;
     padding: 10px 10px;
     color: #000;
     background: #fff;
 }
-.home-page .sticky nav li span{
+/* .cert-lst{
+    color: teal;
+} */
+.sticky .logo{
     color: #000;
 }
+.home-page .sticky li{
+    color: #000;
+}
+.faBook{
+    color: teal;
+    font-size: 32px;
+    margin-left: 15px;
+}
+.faArrowRight{
+    margin-left: 15px;
+
+}
+.faGraduationCap{
+    color: teal;
+    font-size: 32px;
+    margin-left: 5px;
+}
+.faCheck{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    /* height: 1rem;
+    width: 1rem; */
+    font-size: 12px;
+    background: #424141;
+    color: #fff;
+    padding: 15px;
+}
+.contact{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3px;
+    background: teal;
+    color: #fff;
+    padding: 1rem;
+}
+#lastList{
+    border: none;
+}
+@media (max-width: 1570px) {
+    #adjust{
+        width: fit-content;
+        margin: auto;
+    }  
+}
+@media (max-width: 1200px) {
+    .section-one{
+        padding: 5rem 5rem;
+    }  
+}
+

@@ -1,24 +1,40 @@
-import image1 from "./component/assets/Screenshot from 2024-02-07 09-22-00.png"
-import image2 from "./component/assets/Screenshot from 2024-02-07 09-23-10.png"
-import image3 from "./component/assets/Screenshot from 2024-02-07 09-26-48.png"
+import realcousin from "./component/assets/realcousin.png";
+import manager from "./component/assets/manage.png";
+import mtn from "./component/assets/mtn.png";
+import andrilla from "./component/assets/andrilla.png";
 
 export const FrontEndJobs = [
   {
     id: 1,
-    title: "Phonie",
-    image: image1,
-    url: ""
+    title: "RealCousin",
+    image: realcousin,
+    url: "https://radiant-cat-8e67b7.netlify.app/",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum at molestiae alias vitae sit itaque tenetur praesentium corporis eius rerum dolorem non voluptatem voluptas, placeat debitis quos totam. Ipsam eos odit accusamus alias, minima rerum cumque obcaecati cum soluta nisi facilis ut esse laborum, animi nulla quaerat magnam. Suscipit, delectus.",
   },
   {
     id: 2,
-    title: "Title two",
-    image: image2,
-    url: ""
+    title: "Andrilla App",
+    image: andrilla,
+    url: "https://bejewelled-paletas-7ab287.netlify.app/",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum at molestiae alias vitae sit itaque tenetur praesentium corporis eius rerum dolorem non voluptatem voluptas, placeat debitis quos totam. Ipsam eos odit accusamus alias, minima rerum cumque obcaecati cum soluta nisi facilis ut esse laborum, animi nulla quaerat magnam. Suscipit, delectus.",
   },
+
   {
     id: 3,
-    title: "Title 3",
-    image: image3,
-    url: ""
+    title: "Mtn",
+    image: mtn,
+    url: "https://frolicking-pasca-427cd5.netlify.app/",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum at molestiae alias vitae sit itaque tenetur praesentium corporis eius rerum dolorem non voluptatem voluptas, placeat debitis quos totam. Ipsam eos odit accusamus alias, minima rerum cumque obcaecati cum soluta nisi facilis ut esse laborum, animi nulla quaerat magnam. Suscipit, delectus.",
+  },
+  {
+    id: 4,
+    title: "Manager",
+    image: manager,
+    url: "https://clinquant-zabaione-9f9c16.netlify.app/",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum at molestiae alias vitae sit itaque tenetur praesentium corporis eius rerum dolorem non voluptatem voluptas, placeat debitis quos totam. Ipsam eos odit accusamus alias, minima rerum cumque obcaecati cum soluta nisi facilis ut esse laborum, animi nulla quaerat magnam. Suscipit, delectus.",
   },
 ];
