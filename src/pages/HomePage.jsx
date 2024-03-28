@@ -253,7 +253,7 @@ function HomePage() {
               <FontAwesomeIcon icon={faCheck} className="faCheck" />
             </CertList>
             <CertList className="cert-lst" id="lastList">
-              Henley Business School (Environmental Toxicology)
+              Henley Business School 
               <FontAwesomeIcon icon={faCheck} className="faCheck" />
             </CertList>
           </CertWrap>
