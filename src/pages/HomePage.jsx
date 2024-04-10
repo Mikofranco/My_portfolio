@@ -72,7 +72,6 @@ const SectionTwo = styled.section`
   background: #ebe9e9;
   @media (max-width: 750px) {
     padding: 2rem;
-    width: 100%;
   }
 `;
 const Wrapper = styled.div``;
