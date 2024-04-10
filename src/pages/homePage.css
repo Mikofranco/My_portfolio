@@ -211,3 +211,14 @@
     padding: 1rem;
   }
 }
+@media (max-width: 550px) {
+  .contact{
+    display: none;
+  }
+  #sect-four-content {
+    text-align: center;
+    width: fit-content;
+    padding: 5px 10px;
+  }
+}
+

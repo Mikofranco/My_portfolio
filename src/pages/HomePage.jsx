@@ -59,7 +59,7 @@ const InfoHeader = styled.h1`
   color: #000;
 
   @media (max-width: 750px) {
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 1rem;
   }
 `;
@@ -71,7 +71,7 @@ const SectionTwo = styled.section`
   padding: 7rem;
   background: #ebe9e9;
   @media (max-width: 750px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 `;
 const Wrapper = styled.div``;
