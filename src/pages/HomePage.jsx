@@ -21,6 +21,7 @@ import Card from "../component/Card";
 const SectionOne = styled.section`
   @media (max-width: 750px) {
     max-width: 750px;
+    padding: 1rem;
   }
 `;
 
