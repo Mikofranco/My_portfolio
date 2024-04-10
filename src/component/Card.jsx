@@ -14,12 +14,18 @@ const Container = styled.div`
 const Heading = styled.h1`
   font-size: 43px;
   color: Teal;
+  @media (max-width: 750px) {
+    font-size: 30px;
+  }
 `;
 const Description = styled.p`
   background-color: #f2f1e6;
   padding: 2rem;
   border-radius: 10px;
   font-size: 22px;
+  @media (max-width: 750px) {
+    font-size: 18px;
+  }
 `;
 const ImageContainer = styled.div`
   max-width: 450px;
@@ -42,6 +48,10 @@ const Button = styled.a`
   border-radius: 5px;
   padding: 15px 20px;
   margin-left: 2rem;
+  @media (max-width: 750px) {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
 `;
 
 const Card = (props) => {

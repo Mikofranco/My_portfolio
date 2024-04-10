@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react"; // Added React
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mo from "../component/assets/mo.svg";
-import github from "../component/assets/github.svg"
-import linkedin from "../component/assets/linkedin.svg"
+import github from "../component/assets/github.svg";
+import linkedin from "../component/assets/linkedin.svg";
 
 import {
   faArrowRight,
@@ -18,7 +18,11 @@ import { FrontEndJobs } from "../data";
 import "./homePage.css";
 import Card from "../component/Card";
 
-const SectionOne = styled.section``;
+const SectionOne = styled.section`
+  @media (max-width: 750px) {
+    max-width: 750px;
+  }
+`;
 
 const ImageContainer = styled.div`
   display: flex;
@@ -41,25 +45,32 @@ const InfoSection = styled.p`
     margin-top: 5rem;
   }
   @media (max-width: 750px) {
-    font-size: 32px;
+    font-size: 24px;
     max-width: 90%;
     padding: 1rem 14px;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 0rem;
   }
 `;
 const InfoHeader = styled.h1`
   font-size: 64px;
   font-weight: bolder;
   color: #000;
+  @media (max-width: 750px) {
+    font-size: 40px;
+  }
 `;
 
 const SectionTwo = styled.section`
-  width: 80%;
+  /* width: 80%; */
   border-radius: 30px;
   margin: auto;
   padding: 7rem;
   background: #ebe9e9;
+  @media (max-width: 750px) {
+    padding: 2rem;
+    width: 100%;
+  }
 `;
 const Wrapper = styled.div``;
 
@@ -67,6 +78,7 @@ const SectionThree = styled.section`
   background: #f2f1e6;
   text-align: center;
   padding: 7rem 0;
+  width: 100%;
 `;
 const CvBtn = styled.a`
   text-decoration: none;
@@ -113,6 +125,12 @@ const CertList = styled.li`
   list-style: none;
   color: #000;
   border-bottom: 1px solid #000;
+
+  @media (max-width: 750px) {
+    padding: 5px 10px;
+    font-size: 18px;
+    gap: 3rem;
+  }
 `;
 const SectionFour = styled.div`
   text-align: center;
@@ -127,13 +145,16 @@ const SectionFour = styled.div`
 `;
 const SectionFourText = styled.p`
   font-size: 32px;
+  @media (max-width: 1200px) {
+    font-size: 28px;
+  }
 `;
 const SectionFourContent = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
   background: #d2ebeb;
   width: fit-content;
+  gap: 16px;
   border: 2px solid #aed7d7;
   padding: 1rem;
 
@@ -141,15 +162,23 @@ const SectionFourContent = styled.div`
   }
 `;
 const SectionFourCardConatiner = styled.div`
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1000px;
   display: flex;
+  gap: 1rem;
+  margin: auto;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 5rem;
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 750px) {
     padding: 1rem 3rem;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -200,7 +229,7 @@ function HomePage() {
         </ul>
       </header>
       <main>
-        <SectionOne className="section-one" >
+        <SectionOne className="section-one">
           <InfoSection>
             <InfoHeader>
               Brief about Micheal
@@ -253,7 +282,7 @@ function HomePage() {
               <FontAwesomeIcon icon={faCheck} className="faCheck" />
             </CertList>
             <CertList className="cert-lst" id="lastList">
-              Henley Business School 
+              Henley Business School
               <FontAwesomeIcon icon={faCheck} className="faCheck" />
             </CertList>
           </CertWrap>
@@ -261,25 +290,29 @@ function HomePage() {
 
         <SectionFour ref={contactUsRef}>
           <InfoHeader>I would love to get in touch</InfoHeader>
+
           <SectionFourText>
             We're passionate about making connections. Reach out and say hello!
           </SectionFourText>
+
           <SectionFourCardConatiner>
-            <SectionFourContent>
+            <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faPhone} className="contact" />
               <div style={{ display: "block" }}>
                 <h2>Phone</h2>
                 <p>+234 901 148 0776</p>
               </div>
             </SectionFourContent>
-            <SectionFourContent>
+
+            <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faEnvelope} className="contact" />
               <div style={{ display: "block" }}>
                 <h2>Email</h2>
                 <p>ogbechiemicheal@gmail.com</p>
               </div>
             </SectionFourContent>
-            <SectionFourContent>
+
+            <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faLocationPin} className="contact" />
               <div style={{ display: "block" }}>
                 <h2>Location</h2>
@@ -288,11 +321,18 @@ function HomePage() {
             </SectionFourContent>
           </SectionFourCardConatiner>
         </SectionFour>
+
         <img src={mo} alt="" />
         <div className="social-links" id={isSticky ? "sticky" : ""}>
-              <a href="https://github.com/Mikofranco"><img src={github} alt="" style={{display: "block", width: "2rem"}}/></a>
-              <a href="https://www.linkedin.com/in/micheal-ogbechie-937827256/"><img src={linkedin} alt="" style={{display: "block", width: "2rem"}}/></a>
-              <a href="https://github.com/Mikofranc"><img src={github} alt="" style={{display: "block", width: "2rem"}}/></a>
+          <a href="https://github.com/Mikofranco">
+            <img className="link-img" src={github} alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/micheal-ogbechie-937827256/">
+            <img src={linkedin} alt="" />
+          </a>
+          <a href="https://github.com/Mikofranc">
+            <img src={github} alt="" />
+          </a>
         </div>
       </main>
     </div>
