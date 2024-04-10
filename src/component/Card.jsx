@@ -10,6 +10,9 @@ const Container = styled.div`
   background: #f9fcfc;
   margin: auto;
   transition: ease 0.6s;
+  @media (max-width: 750px) {
+    padding: 14px 14px 38px 14px;
+  }
 `;
 const Heading = styled.h1`
   font-size: 43px;
@@ -24,7 +27,8 @@ const Description = styled.p`
   border-radius: 10px;
   font-size: 22px;
   @media (max-width: 750px) {
-    font-size: 18px;
+    font-size: 16x;
+    padding: 15px;
   }
 `;
 const ImageContainer = styled.div`

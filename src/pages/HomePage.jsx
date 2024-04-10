@@ -21,7 +21,7 @@ import Card from "../component/Card";
 const SectionOne = styled.section`
   @media (max-width: 750px) {
     max-width: 750px;
-    padding: 1rem;
+    padding: 5rem 1rem 1rem 1rem;
   }
 `;
 
@@ -46,7 +46,7 @@ const InfoSection = styled.p`
     margin-top: 5rem;
   }
   @media (max-width: 750px) {
-    font-size: 24px;
+    font-size: 20px;
     max-width: 90%;
     padding: 1rem 14px;
     margin: auto;
@@ -57,8 +57,10 @@ const InfoHeader = styled.h1`
   font-size: 64px;
   font-weight: bolder;
   color: #000;
+
   @media (max-width: 750px) {
     font-size: 40px;
+    margin-top: 1rem;
   }
 `;
 
