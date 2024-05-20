@@ -147,6 +147,7 @@ const SectionFour = styled.div`
 `;
 const SectionFourText = styled.p`
   font-size: 32px;
+  color: #223f3f;
   @media (max-width: 1200px) {
     font-size: 28px;
   }
