@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mo from "../component/assets/mo.svg";
 import github from "../component/assets/github.svg";
 import linkedin from "../component/assets/linkedin.svg";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import "./sliderStyle.css"
+
+
 
 import {
   faArrowRight,
@@ -17,6 +22,9 @@ import styled from "styled-components";
 import { FrontEndJobs } from "../data";
 import "./homePage.css";
 import Card from "../component/Card";
+import Slider from "react-slick";
+import { useGetScreenSize } from "../getScreenSize";
+
 
 const SectionOne = styled.section`
   @media (max-width: 750px) {
@@ -186,6 +194,7 @@ const SectionFourCardConatiner = styled.div`
 `;
 
 function HomePage() {
+  const {mobile, tab, pc} = useGetScreenSize();
   const [isSticky, setIsSticky] = useState(false);
   const contactUsRef = useRef(null);
   const homeRef = useRef(null);
@@ -217,7 +226,18 @@ function HomePage() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
   }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow:  mobile ? 1 : (tab ? 2 : 3),
+    slidesToScroll: 1,
+    autoplay: true, 
+    autoplaySpeed: 2000, 
+  };
 
   return (
     <div className="home-page" ref={homeRef}>
@@ -253,7 +273,7 @@ function HomePage() {
         <SectionTwo ref={frontendRef}>
           <Wrapper>
             <InfoHeader id="adjust">Front-End projects</InfoHeader>
-            <Cardsection>
+            <Slider {...settings}>
               {FrontEndJobs.map((job) => (
                 <Card
                   heading={job.title}
@@ -262,7 +282,15 @@ function HomePage() {
                   link={job.url}
                 />
               ))}
-            </Cardsection>
+            </Slider>
+          </Wrapper>
+        </SectionTwo>
+
+
+        <SectionTwo ref={frontendRef}>
+          <Wrapper>
+            <InfoHeader id="adjust">Back-End projects</InfoHeader>
+           
           </Wrapper>
         </SectionTwo>
 
@@ -302,24 +330,24 @@ function HomePage() {
             <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faPhone} className="contact" />
               <div style={{ display: "block" }}>
-                <h2>Phone</h2>
-                <p>+234 901 148 0776</p>
+                <h2 style={{color: "#000"}}>Phone</h2>
+                <p style={{color: "#000"}}>+234 901 148 0776</p>
               </div>
             </SectionFourContent>
 
             <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faEnvelope} className="contact" />
               <div style={{ display: "block" }}>
-                <h2>Email</h2>
-                <p>ogbechiemicheal@gmail.com</p>
+                <h2 style={{color: "#000"}}>Email</h2>
+                <p style={{color: "#000"}}>ogbechiemicheal@gmail.com</p>
               </div>
             </SectionFourContent>
 
             <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faLocationPin} className="contact" />
               <div style={{ display: "block" }}>
-                <h2>Location</h2>
-                <p>Lagos, Nigeria</p>
+                <h2 style={{color: "#000"}}>Location</h2>
+                <p style={{color: "#000"}}>Lagos, Nigeria</p>
               </div>
             </SectionFourContent>
           </SectionFourCardConatiner>

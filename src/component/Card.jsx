@@ -2,45 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faBook } from "@fortawesome/free-solid-svg-icons";
+import"./cardone.css"
 
-const Container = styled.div`
-  max-width: 500px;
-  box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
-  padding: 3rem;
-  background: #f9fcfc;
-  margin: auto;
-  transition: ease 0.6s;
-  @media (max-width: 750px) {
-    padding: 14px 14px 38px 14px;
-  }
-`;
-const Heading = styled.h1`
-  font-size: 43px;
-  color: Teal;
-  @media (max-width: 750px) {
-    font-size: 30px;
-  }
-`;
-const Description = styled.p`
-  background-color: #f2f1e6;
-  padding: 2rem;
-  border-radius: 10px;
-  font-size: 22px;
-  @media (max-width: 750px) {
-    font-size: 16x;
-    padding: 15px;
-  }
-`;
-const ImageContainer = styled.div`
-  max-width: 450px;
-  aspect-ratio: 16/11;
-  padding: 0 2rem;
-`;
-const Image = styled.img`
-  width: 100%;
-  object-fit: cover;
-  border: 1px solid gray;
-`;
 const Button = styled.a`
   cursor: pointer;
   text-decoration: none;
@@ -48,7 +11,7 @@ const Button = styled.a`
   width: 100%;
   background: teal;
   color: #fff;
-  font-size: 22px;
+  font-size: 14px;
   border-radius: 5px;
   padding: 15px 20px;
   margin-left: 2rem;
@@ -58,19 +21,22 @@ const Button = styled.a`
   }
 `;
 
+
 const Card = (props) => {
   return (
-    <Container>
-      <Heading>{props.heading}</Heading>
-      <Description>{props.description}</Description>
-      <ImageContainer>
-        <Image src={props.image} />
-      </ImageContainer>
-      <Button href={props.link}>
-        View Site
-        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight" />
-      </Button>
-    </Container>
+    <div className="card-one" href={props.link}>
+      <div className="image-box">
+        <img src={props.image} />
+      </div>
+      <div className="content">
+        <h2>{props.heading}</h2>
+        <p>{props.description}</p>
+        <Button href={props.link} className="btn">
+          View Site
+          <FontAwesomeIcon icon={faArrowRight} className="faArrowRight" />
+        </Button>
+      </div>
+    </div>
   );
 };
 
