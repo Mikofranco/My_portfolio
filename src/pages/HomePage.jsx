@@ -24,6 +24,7 @@ import "./homePage.css";
 import Card from "../component/Card";
 import Slider from "react-slick";
 import { useGetScreenSize } from "../getScreenSize";
+import { useNavigate } from "react-router-dom";
 
 
 const SectionOne = styled.section`
@@ -62,7 +63,7 @@ const InfoSection = styled.p`
   }
 `;
 const InfoHeader = styled.h1`
-  font-size: 64px;
+  font-size: 52px;
   font-weight: bolder;
   color: #000;
 
@@ -200,6 +201,7 @@ function HomePage() {
   const homeRef = useRef(null);
   const frontendRef = useRef(null);
   const certificationRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleContactButtonClick = () => {
     contactUsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -276,6 +278,7 @@ function HomePage() {
             <Slider {...settings}>
               {FrontEndJobs.map((job) => (
                 <Card
+                onClick={()=>navigate(job.url)}
                   heading={job.title}
                   description={job.description}
                   image={job.image}
