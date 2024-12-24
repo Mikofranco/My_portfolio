@@ -200,7 +200,9 @@ function HomePage() {
   const contactUsRef = useRef(null);
   const homeRef = useRef(null);
   const frontendRef = useRef(null);
+  const backendRef = useRef(null);
   const certificationRef = useRef(null);
+
   const navigate = useNavigate();
 
   const handleContactButtonClick = () => {
@@ -211,6 +213,9 @@ function HomePage() {
   };
   const handleFrontendBtnClick = () => {
     frontendRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleBackendBtnClick = () => {
+    backendRef.current.scrollIntoView({ behavior: "smooth" });
   };
   const handleCertificationBtnClick = () => {
     certificationRef.current.scrollIntoView({ behavior: "smooth" });
@@ -264,7 +269,7 @@ function HomePage() {
             for communication and maintaining relationships with staff and
             professionals in order to solve complex problems and achieve common
             goals, and eager to contribute to a dynamic team. I bring a strong
-            foundation in Html, Css, Javascript, React, Springboot, java....
+            foundation in Html, Css, Javascript, Next js, Typescript, React, Springboot, java....
             <CvBtn href="https://drive.google.com/file/d/1cpMVFw8ZKkzGLgihQp7AD81lwcoZKaHC/view">
               View Cv
               <FontAwesomeIcon icon={faArrowRight} className="faArrowRight" />
@@ -290,7 +295,7 @@ function HomePage() {
         </SectionTwo>
 
 
-        <SectionTwo ref={frontendRef}>
+        <SectionTwo ref={backendRef}>
           <Wrapper>
             <InfoHeader id="adjust">Back-End projects</InfoHeader>
            
