@@ -2,8 +2,26 @@ import realcousin from "./component/assets/realcousin.png";
 import manager from "./component/assets/manage.png";
 import chatter from "./component/assets/chatter.png";
 import andrilla from "./component/assets/andrilla.png";
+import gtube from "./component/assets/gospeltube.png"
+import bionofitsa from "./component/assets/bionatfisAlogo.png"
 
 export const FrontEndJobs = [
+  {
+    id: 1,
+    title: "Bionafithsa",
+    image: bionofitsa,
+    url: "https://radiant-cat-8e67b7.netlify.app/",
+    description:
+      "Real cousin is an app that connects family, the aim of of the app is to keep relationship betewwen families and friend, its a project i took to work on to ehnace my front end skills. Technologies used : Html, Css, Javascript, Fontawesome and Goodle fonts",
+  },
+  {
+    id: 1,
+    title: "Gtube",
+    image: gtube,
+    url: "https://radiant-cat-8e67b7.netlify.app/",
+    description:
+      "Real cousin is an app that connects family, the aim of of the app is to keep relationship betewwen families and friend, its a project i took to work on to ehnace my front end skills. Technologies used : Html, Css, Javascript, Fontawesome and Goodle fonts",
+  },
   {
     id: 1,
     title: "RealCousin",
