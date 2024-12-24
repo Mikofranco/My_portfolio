@@ -270,7 +270,7 @@ function HomePage() {
             professionals in order to solve complex problems and achieve common
             goals, and eager to contribute to a dynamic team. I bring a strong
             foundation in Html, Css, Javascript, Next js, Typescript, React, Springboot, java....
-            <CvBtn href="https://drive.google.com/file/d/1cpMVFw8ZKkzGLgihQp7AD81lwcoZKaHC/view">
+            <CvBtn href="https://drive.google.com/file/d/1oUcA-GADq_lur1CzKBBPeHkrPrqmk_27/view?usp=sharing">
               View Cv
               <FontAwesomeIcon icon={faArrowRight} className="faArrowRight" />
             </CvBtn>
