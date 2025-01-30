@@ -3,11 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mo from "../component/assets/mo.svg";
 import github from "../component/assets/github.svg";
 import linkedin from "../component/assets/linkedin.svg";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./sliderStyle.css"
-
-
+import "./sliderStyle.css";
 
 import {
   faArrowRight,
@@ -25,7 +23,6 @@ import Card from "../component/Card";
 import Slider from "react-slick";
 import { useGetScreenSize } from "../getScreenSize";
 import { useNavigate } from "react-router-dom";
-
 
 const SectionOne = styled.section`
   @media (max-width: 750px) {
@@ -195,7 +192,7 @@ const SectionFourCardConatiner = styled.div`
 `;
 
 function HomePage() {
-  const {mobile, tab, pc} = useGetScreenSize();
+  const { mobile, tab, pc } = useGetScreenSize();
   const [isSticky, setIsSticky] = useState(false);
   const contactUsRef = useRef(null);
   const homeRef = useRef(null);
@@ -233,17 +230,16 @@ function HomePage() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-
   }, []);
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow:  mobile ? 1 : (tab ? 2 : 3),
+    slidesToShow: mobile ? 1 : tab ? 2 : 3,
     slidesToScroll: 1,
-    autoplay: true, 
-    autoplaySpeed: 2000, 
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -253,7 +249,16 @@ function HomePage() {
         <ul>
           <li onClick={handleHomeButtonClick}>Home</li>
           <li onClick={handleFrontendBtnClick}>Frontend</li>
-          <li>Backend</li>
+          <li>
+            <a
+              href="https://github.com/Mikofranco?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Backend
+            </a>
+          </li>
+
           <li onClick={handleCertificationBtnClick}>Certification</li>
           <li onClick={handleContactButtonClick}>Contact</li>
         </ul>
@@ -269,7 +274,8 @@ function HomePage() {
             for communication and maintaining relationships with staff and
             professionals in order to solve complex problems and achieve common
             goals, and eager to contribute to a dynamic team. I bring a strong
-            foundation in Html, Css, Javascript, Next js, Typescript, React, Springboot, java....
+            foundation in Html, Css, Javascript, Next js, Typescript, React,
+            Springboot, java....
             <CvBtn href="https://drive.google.com/file/d/1oUcA-GADq_lur1CzKBBPeHkrPrqmk_27/view?usp=sharing">
               View Cv
               <FontAwesomeIcon icon={faArrowRight} className="faArrowRight" />
@@ -283,7 +289,7 @@ function HomePage() {
             <Slider {...settings}>
               {FrontEndJobs.map((job) => (
                 <Card
-                onClick={()=>navigate(job.url)}
+                  onClick={() => navigate(job.url)}
                   heading={job.title}
                   description={job.description}
                   image={job.image}
@@ -294,11 +300,9 @@ function HomePage() {
           </Wrapper>
         </SectionTwo>
 
-
         <SectionTwo ref={backendRef}>
           <Wrapper>
             <InfoHeader id="adjust">Back-End projects</InfoHeader>
-           
           </Wrapper>
         </SectionTwo>
 
@@ -338,24 +342,24 @@ function HomePage() {
             <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faPhone} className="contact" />
               <div style={{ display: "block" }}>
-                <h2 style={{color: "#000"}}>Phone</h2>
-                <p style={{color: "#000"}}>+234 901 148 0776</p>
+                <h2 style={{ color: "#000" }}>Phone</h2>
+                <p style={{ color: "#000" }}>+234 901 148 0776</p>
               </div>
             </SectionFourContent>
 
             <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faEnvelope} className="contact" />
               <div style={{ display: "block" }}>
-                <h2 style={{color: "#000"}}>Email</h2>
-                <p style={{color: "#000"}}>ogbechiemicheal@gmail.com</p>
+                <h2 style={{ color: "#000" }}>Email</h2>
+                <p style={{ color: "#000" }}>ogbechiemicheal@gmail.com</p>
               </div>
             </SectionFourContent>
 
             <SectionFourContent id="sect-four-content">
               <FontAwesomeIcon icon={faLocationPin} className="contact" />
               <div style={{ display: "block" }}>
-                <h2 style={{color: "#000"}}>Location</h2>
-                <p style={{color: "#000"}}>Lagos, Nigeria</p>
+                <h2 style={{ color: "#000" }}>Location</h2>
+                <p style={{ color: "#000" }}>Lagos, Nigeria</p>
               </div>
             </SectionFourContent>
           </SectionFourCardConatiner>
@@ -369,9 +373,9 @@ function HomePage() {
           <a href="https://www.linkedin.com/in/micheal-ogbechie-937827256/">
             <img src={linkedin} alt="" />
           </a>
-          <a href="https://github.com/Mikofranc">
+          {/* <a href="https://github.com/Mikofranc">
             <img src={github} alt="" />
-          </a>
+          </a> */}
         </div>
       </main>
     </div>
